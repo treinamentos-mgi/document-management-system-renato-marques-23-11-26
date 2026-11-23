@@ -1,0 +1,188 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #18201b;
+  background: #edf1eb;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(24, 32, 27, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 32, 27, 0.035) 1px, transparent 1px),
+    #edf1eb;
+  background-size: 24px 24px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(960px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.app-header {
+  border-bottom: 1px solid #9da99f;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+}
+
+.app-eyebrow {
+  margin: 0 0 6px;
+  color: #56705f;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(32px, 7vw, 56px);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+}
+
+.app-shell > section {
+  border-bottom: 1px solid #cbd3cc;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+}
+
+.app-shell form {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(180px, 0.6fr) auto;
+  align-items: end;
+  gap: 16px;
+}
+
+.app-shell form div {
+  display: grid;
+  gap: 8px;
+}
+
+.app-shell label {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.app-shell input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #9da99f;
+  border-radius: 4px;
+  background: #fbfcfa;
+  padding: 8px 10px;
+}
+
+.app-shell input[type='file'] {
+  padding: 6px;
+}
+
+.app-shell button {
+  min-height: 42px;
+  border: 1px solid #31553d;
+  border-radius: 4px;
+  background: #31553d;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+}
+
+.app-shell button:hover:not(:disabled) {
+  background: #24432f;
+}
+
+.app-shell button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.app-shell ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.app-shell li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 72px;
+  border: 1px solid #c3cbc4;
+  border-radius: 6px;
+  background: rgba(251, 252, 250, 0.88);
+  padding: 12px 14px;
+}
+
+.app-shell li > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.app-shell li strong,
+.app-shell li span {
+  overflow-wrap: anywhere;
+}
+
+.app-shell li span {
+  color: #68736b;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 13px;
+}
+
+.app-shell li button {
+  flex: none;
+}
+
+[role='alert'] {
+  color: #9a3329;
+}
+
+@media (max-width: 680px) {
+  .app-shell {
+    width: min(100% - 24px, 960px);
+    padding-top: 28px;
+  }
+
+  .app-shell form {
+    grid-template-columns: 1fr;
+  }
+
+  .app-shell form button {
+    width: 100%;
+  }
+
+  .app-shell li {
+    align-items: flex-start;
+  }
+}
